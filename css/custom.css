@@ -1,0 +1,384 @@
+/*==============
+  DEFAULT CSS
+================*/
+* {
+    margin:0;
+    padding:0;
+}
+.container {
+    width:1140px;
+    margin:0 auto;
+}
+li {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+.flex {
+    display: flex; 
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+
+/*==============
+  HEADER CSS
+================*/
+header{
+    background:#f6f9f9;
+    padding:31.5px 0px;
+}
+.logo {
+    max-width: 30%;
+    flex-basis:30%;
+}
+.logo img {}
+nav {
+    max-width: 70%;
+    flex-basis:70%;
+}
+nav ul {
+    justify-content: flex-end;
+}
+nav ul li a {
+    color: #2d3950;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding:9.5px 0px;
+    margin-left:25px;
+    display:block;
+}
+nav ul li a:hover {
+    color:#15a4fa;
+}
+
+
+/*==============
+  BANNER CSS
+================*/
+.banner {
+    background:url('../images/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position:relative;
+}
+.banner .flex {
+    justify-content: center;
+    align-items:center;
+    min-height:90vh;
+}
+.banner-content {
+    text-align: center;
+}
+.banner-content h1 {
+    font-size: 120px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom:15px;
+}
+.banner-content span {
+    max-width:600px;
+    height: 2px;
+    background:#15a4fa;
+    display:block;
+}
+.banner-content p {
+    font-size: 20px;
+    font-weight: 400;
+    color:#fff;
+    padding:35px 0 55px;
+}
+.banner-content button {
+    background: transparent;
+    border: 1px solid #15a4fa;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 15.5px 35px; 
+}
+.banner a.arrow-down {
+    position: absolute;
+    left:50%;
+    bottom:40px;
+    color: #fff;
+    font-size: 28px;
+    transform: translateX(-50%);
+}
+
+
+/*================
+   ABOUT CSS
+==================*/
+.about-section {background: #f6f9f9;}
+.heading {
+    text-align: center;
+    padding:70px 0 100px;
+}
+.heading h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color:#2d3950;
+    padding-bottom: 30px;
+}
+.heading p {
+    font-size:20px;
+    font-weight:400;
+    color:#909090;
+    line-height: 1.6;
+}
+
+/*================
+  FEATURES CSS
+==================*/
+.features {margin:65px 0px;}
+.feature-box{
+    max-width: 33.3%;
+    flex-basis: 33.33%;
+    padding:0 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.feature-icon i {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+50,5fc3ff+50 */
+    background: rgb(72,186,255); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(72,186,255,1) 50%, rgba(95,195,255,1) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(72,186,255,1) 50%,rgba(95,195,255,1) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(72,186,255,1) 50%,rgba(95,195,255,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 ); /* IE6-9 */
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+.feature-content h3 {
+    color: #2d3950;
+    font-size:22px;
+    font-weight: 400;
+    padding:20px 0;
+}
+.feature-content p {
+    font-size: 15px;
+    font-weight: 400;
+    color:#999;
+    line-height: 1.5;
+}
+
+
+/*=====================
+   GALLERY CSS
+======================*/
+.gallery {
+    background: #f6f9f9;
+    padding-bottom:110px;
+    overflow: hidden;
+}
+.gallery-single-box {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.gallery-single-box:last-child {
+    margin-bottom:0px;
+}
+.gallery-box {
+    max-width:33.3%; 
+    float:left;
+    margin-right:30px;
+    position: relative;
+    overflow: hidden;
+}
+.gallery-box:last-child {
+    margin-right: 0px;
+}
+.gallery-box .overlay {
+    position: absolute;
+    width: 100%;
+    height:0%;
+    background: #15a4fa;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:all 0.4s;
+}
+.gallery-box:hover .overlay {
+    opacity: 0.8;
+    height:100%;
+}
+.gallery-box a {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-align: center;
+    transition:all 0.4s;
+}
+.gallery-box a.search {
+    left:-10%;
+    transform: translate(-42%,-50%);
+}
+.gallery-box a.link {
+    right:-10%;
+    transform: translate(42%, -50%);
+}
+.gallery-box:hover a.search {
+    left: 42%;
+}
+.gallery-box:hover a.link {
+    right: 42%;
+}
+.gallery-box a.search:hover, .gallery-box a.link:hover {
+    background:#2d3950;
+    border: 1px solid #2d3950;
+}
+
+/*====================
+     CONTACT CSS
+======================*/
+.contact-section {
+    background: url('../images/contact-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.contact-overlay {
+    width:100%; 
+    height: 100%;
+    background:#2a3549;
+    opacity: 0.9;
+    padding:70px 0px 110px;
+}
+.contact-heading {
+    text-align: center;
+}
+.contact-heading h2 {
+    font-size: 41px;
+    font-weight: 400;
+    color:#fff;
+    padding-bottom:15px;
+}
+.contact-heading p {
+    font-size: 15px;
+    font-weight: 400;
+    color:#999;
+    padding-bottom: 45px;
+}
+.contact-form {
+    max-width: 55%;
+    margin: auto;
+}
+.contact-content input[type="text"], .contact-content input[type="email"], .contact-content textarea {
+    width:100%;
+    border:1px solid #999;
+    background: transparent;
+    color: #999;
+    padding:20px 10px;
+    margin-bottom:20px;
+    border-radius:5px;
+    box-sizing: border-box;
+}
+.contact-content textarea {
+    padding:5px 10px;
+}
+
+.contact-content ul.flex {
+    align-items: center;
+}
+.contact-content ul.flex li {
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.contact-content ul.flex li label {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.contact-content input[type="checkbox"] {
+    width: auto;
+}
+.contact-content input[type="submit"] {
+    float: right;
+    font-size: 18px;
+    border: 1px solid #15a4fa;
+    cursor: pointer;
+    margin-bottom: 0px;
+    background: transparent;
+    color:#fff;
+    padding:12px 48px;
+    border-radius: 5px;
+}
+.contact-content input[type="submit"]:hover {
+    background:#15a4fa;
+}
+/*================
+  FOOTER CSS
+=================*/
+footer {
+    background: #f6f9f9;
+    padding: 25px 0px;
+}
+footer .flex {
+    align-items: center;
+}
+.footer-copyright, .footer-social-list {
+    max-width: 50%;
+    flex-basis:50%;
+}
+.footer-copyright p {
+    font-size: 15px;
+    font-weight: 400;
+    color:#999;
+}
+.footer-copyright p a {
+    text-transform: uppercase;
+    color: #999;
+}
+.footer-copyright p a:hover {
+    color:#15a4fa;
+}
+.footer-social-list ul {
+    text-align: right;
+}
+.footer-social-list ul li {
+    display: inline-block;
+}
+.footer-social-list ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#fff;
+    background:#15a4fa;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-left:6px;
+}
+.footer-social-list ul li a:hover {
+    background: #2d3950;
+}
+
+
+
